@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassava_Leaf_Disease_Detection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./App.css">
+    <img src="images/bg.jpg" id="bg" alt="">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#"><b>Cassava Leaf Disease Detection</b></a>
+    </nav>
+    
+    <p class="test1">Manihot esculenta, commonly called cassava,
+       manioc, or yuca (among numerous regional names) is a woody shrub of the spurge family, 
+       Euphorbiaceae, native to South America. Although a perennial plant, cassava is extensively 
+       cultivated as an annual crop in tropical and subtropical regions for its edible starchy tuberous 
+       root, a major source of carbohydrates. </p>
+    <div class="container">
+        <div class="row">
+            <div class="col card-wrapper" data-player="Cassava_Bacterial_Blight">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/casssava bacterial blight.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Cassava bacterial blight(CBB)</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="col card-wrapper" data-player="Cassava_Brown_Streak_Disease">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/cassava-brown-streak-disease.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Cassava Brown Streak Disease (CBSD)</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>            
+            <div class="col card-wrapper" data-player="Cassava_Green_Mottle">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/cassava-green-mottle.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Cassava Green Mottle (CGM)</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="col card-wrapper" data-player="Cassava_Mosaic_Disease">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/cassava-mosaic disease.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Cassava Mosaic Disease (CMD)</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-player="Healthy">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Healthy.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Healthy</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-8 error" id="error" >
+                <p>Can't classify image. Classifier was not able to detect disease</p>
+            </div>
+
+            <div class="col-sm-4" id="resultHolder">
+            </div>
+            <div class="col-sm-4" id="divClassTable">
+                <table id="classTable">
+                        <tr>
+                            <th>Disease/Healthy</th>
+                            <th>Probability Score</th>
+                        </tr>
+                        <tr>
+                            <td>Cassava Bacterial Blight (CBB)</td>
+                            <td id="score_Cassava_Bacterial_Blight"></td>
+                        </tr>
+                        <tr>
+                            <td>Cassava Brown Streak Disease (CBSD)</td>
+                            <td id="score_Cassava_Brown_Streak_Disease"></td>
+                        </tr>
+                        <tr>
+                            <td>Cassava Green Mottle (CGM)</td>
+                            <td id="score_Cassava_Green_Mottle"></td>
+                        </tr>
+                        <tr>
+                            <td>Cassava Mosaic Disease (CMD)</td>
+                            <td id="score_Cassava_Mosaic_Disease"></td>
+                        </tr>
+                        <tr>
+                            <td>Healthy</td>
+                            <td id="score_Healthy"></td>
+                        </tr>
+                </table>
+            </div>
+            
+        </div>
+
+    </div>
+    <p class="test1">Xanthomonas axonopodis pv. manihotis is the pathogen that causes <b>bacterial blight of 
+        cassava</b>. Among diseases which afflict cassava worldwide, bacterial blight causes the largest losses 
+        in terms of yield. Xanthomonas axonopodis pv. manihotis is a vascular and foliar pathogenic species
+        of bacteria. It normally enters its host plants through stomatal openings or hydathodes.</p>
+    <p class="test1"><b>Cassava brown streak virus disease (CBSD)</b> is a damaging disease of cassava plants, 
+        and is especially troublesome in East Africa. CBSD is characterized by severe chlorosis and necrosis on 
+        infected leaves, giving them a yellowish, mottled appearance.[3] Chlorosis may be associated with the veins, 
+        spanning from the mid vein, secondary and tertiary veins, or rather in blotches unconnected to veins</p>
+    <p class="test1"><b>Cassava green mottle</b> nepovirus.these are viruses that are transmitted by nematodes - hence the name.Young leaves are puckered
+        with faint to distinct yellow spots (Photo 1), green patterns (mosaics), and twisted margins (Photo 2). Usually, the shoots recover 
+        from symptoms and appear healthy. Occasionally, plants become severely stunted, edible 
+        roots are absent or, if present, they are small and woody when cooked.
+    </p>
+
+    <p class="test1"><b>Cassava mosaic virus</b> is the common name used to refer to any of eleven different
+        species of plant pathogenic virus in the genus Begomovirus. African cassava mosaic virus (ACMV), 
+        East African cassava mosaic virus (EACMV), and South African cassava mosaic virus (SACMV) are 
+        distinct species of circular single-stranded DNA viruses which are transmitted by whiteflies 
+        and primarily infect cassava plants</p>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="dropzone.min.js"></script>
+<script src="App.js"></script>
+</html>
