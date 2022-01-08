@@ -18,7 +18,9 @@ function init() {
     dz.on("complete", function (file) {
         let imageData = file.dataURL;
         
-        var url = "http://127.0.0.1:5000/Cassava_Leaf_Disease_Detection";
+        const production  = 'https://cassava-leaf-disease-detection.herokuapp.com/Cassava_Leaf_Disease_Detection';
+        const development = "http://127.0.0.1:5000/Cassava_Leaf_Disease_Detection";
+        const url = (process.env.NODE_ENV ? production : development);
 
         $.post(url, {
             image_data: file.dataURL
