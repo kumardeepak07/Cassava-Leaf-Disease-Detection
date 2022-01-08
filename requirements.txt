@@ -20,3 +20,5 @@ numpy == 1.19.5
 
 # C:\Users\v-kumardeep\Cassava-Leaf-Disease-Detection\util.py: 12
 opencv_python == 4.5.4.60
+
+gunicorn
