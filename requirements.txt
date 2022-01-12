@@ -23,7 +23,7 @@ numpy == 1.19.5
 
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\Cassava Leaf Disease Detection.ipynb: 14
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\server\util.py: 11
-opencv_python == 4.5.4.60
+opencv-contrib-python-headless
 
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\Cassava Leaf Disease Detection.ipynb: 1
 pandas == 1.3.4
