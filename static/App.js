@@ -18,10 +18,7 @@ function init() {
     dz.on("complete", function (file) {
         let imageData = file.dataURL;
         
-        const production  = 'https://cassava-leaf-disease-detection.herokuapp.com/Cassava_Leaf_Disease_Detection';
-        const development = "http://127.0.0.1:5000/Cassava_Leaf_Disease_Detection";
-        const url = (process.env.NODE_ENV ? production : development);
-
+        var url = '/Cassava_Leaf_Disease_Detection';
         $.post(url, {
             image_data: file.dataURL
         },function(data, status) {
