@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Dec 20 19:58:55 2021
 
-@author: v-kumardeep
-"""
-
-import joblib
 import json
 import numpy as np
 import base64
@@ -13,7 +7,6 @@ import cv2
 import keras
 import h5py
 from PIL import Image
-from io import BytesIO
 
 __class_name_to_number = {}
 __class_number_to_name = {}
@@ -47,7 +40,6 @@ def class_number_to_name(class_num):
     return __class_number_to_name[class_num]
 
 def load_saved_artifacts():
-    print("loading saved artifacts...start")
     global __class_name_to_number
     global __class_number_to_name
 
@@ -60,7 +52,6 @@ def load_saved_artifacts():
     if __model is None:
         with h5py.File('Cassava_model.h5', "r") as f:
             __model = keras.models.load_model(f)
-    print("loading saved artifacts...done")
 
 
 def get_cv2_image_from_base64_string(b64str):
@@ -68,13 +59,11 @@ def get_cv2_image_from_base64_string(b64str):
     nparr = np.frombuffer(base64.b64decode(encoded_data), np.uint8)
     image = cv2.imdecode(nparr, cv2.IMREAD_UNCHANGED)
     img = Image.fromarray(image, 'RGB')
-    
     return img
 
     
 
 def get_image_(image_path, image_base64_data):
-
     if image_path:
         img = Image.open(image_path)
     else:
@@ -83,15 +72,9 @@ def get_image_(image_path, image_base64_data):
     return img
 
 
-
-def get_b64_test_image():
-    f = open('leaf.txt','r')
-    data = f.read()
-    return data
-
 if __name__ == '__main__':
     load_saved_artifacts()
-    print(classify_image(get_b64_test_image(),None))
+
 
 
 
