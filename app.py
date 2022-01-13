@@ -12,7 +12,7 @@ def home():
 @app.route('/Cassava_Leaf_Disease_Detection', methods=['GET', 'POST'])
 def classify_image():
     image_data = request.form['image_data']
-
+    util.load_saved_artifacts()
     response = jsonify(util.classify_image(image_data))
 
     response.headers.add('Access-Control-Allow-Origin', '*')
