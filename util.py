@@ -50,7 +50,7 @@ def load_saved_artifacts():
 
     global __model
     if __model is None:
-        with h5py.File('Cassava_model.h5', "r") as f:
+        with h5py.File('Cassava_best_model.h5', "r") as f:
             __model = keras.models.load_model(f)
 
 
