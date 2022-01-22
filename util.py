@@ -50,8 +50,7 @@ def load_saved_artifacts():
 
     global __model
     if __model is None:
-        with h5py.File('Cassava_best_model.h5', "r") as f:
-            __model = keras.models.load_model(f)
+        __model = keras.models.load_model("my_model")
 
 
 def get_cv2_image_from_base64_string(b64str):
