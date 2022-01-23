@@ -7,15 +7,9 @@ Flask == 1.1.2
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\server\util.py: 14
 Pillow == 8.4.0
 
-# C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\server\util.py: 13
-h5py == 3.2.1
-
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\Cassava Leaf Disease Detection.ipynb: 91
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\server\util.py: 12
 keras == 2.7.0
-
-# C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\Cassava Leaf Disease Detection.ipynb: 3
-matplotlib == 3.4.3
 
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\Cassava Leaf Disease Detection.ipynb: 2
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\server\util.py: 9
@@ -34,14 +28,8 @@ plotly == 5.4.0
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\Cassava Leaf Disease Detection.ipynb: 36
 scikit_learn == 0.24.2
 
-# C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\Cassava Leaf Disease Detection.ipynb: 13
-seaborn == 0.11.2
-
 # C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\Cassava Leaf Disease Detection.ipynb: 90,92
 tensorflow_cpu == 2.7.0
-
-# C:\Users\v-kumardeep\Desktop\Data Science\cassava-leaf-disease-classification\Cassava Leaf Disease Detection.ipynb: 5
-tqdm == 4.62.3
 
 gunicorn==20.1.0
 itsdangerous==2.0.1
